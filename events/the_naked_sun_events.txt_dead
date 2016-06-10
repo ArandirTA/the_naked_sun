@@ -1,0 +1,45 @@
+############################################################################################
+###                   Event for the Naked Sun Mod                                       ####
+###                   Written by Arandir Tur-Anion                                      ####
+############################################################################################
+
+namespace = the_naked_sun
+
+## Modifier for the new colonisation system
+
+## ADD the modifier when there is no free buildings
+planet_event = {
+        id = the_naked_sun.1
+        # title = OK
+        # desc = OK
+        hide_window = yes
+
+        trigger = {
+                owner = {
+                        has_colony_progress = 100
+                }
+        }
+        immediate = {
+                add_modifier = {
+                        modifier = "tns_firststep_noplace"
+                }
+        }
+}
+
+## Remove the title
+planet_event = {
+        id = the_naked_sun.2
+        # title = OK
+        # desc = OK
+
+        hide_window = yes
+
+        trigger = {
+                owner = {
+                        has_building = "building_capital_2"
+                }
+        }
+        immediate = {
+                remove_modifiers = "tns_firststep_noplace"
+        }
+}
