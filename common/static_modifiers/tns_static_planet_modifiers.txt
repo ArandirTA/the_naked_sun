@@ -1,5 +1,5 @@
 tns_firststep_noplace = {
-	pop_growth_req_mult = -1.0
+	pop_growth_req_mult = 100000000
 	## icon = "gfx/interface/icons/planet_modifiers/pm_hazardous_weather.dds"
 	icon_frame = 2
 }

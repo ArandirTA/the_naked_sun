@@ -13,30 +13,33 @@ planet_event = {
         # title = OK
         # desc = OK
         hide_window = yes
+        is_triggered_only = yes
 
         trigger = {
                 owner = {
-                        has_colony_progress = 100
+                        always = yes
                 }
         }
         immediate = {
-                add_modifier = {
-                        modifier = "tns_firststep_noplace"
-                }
+                ## add_modifier = {
+                ##        modifier = "tns_firststep_noplace"
+                ##}
+                
         }
 }
 
 ## Remove the title
 planet_event = {
         id = the_naked_sun.2
+        is_triggered_only = yes
         # title = OK
         # desc = OK
 
         hide_window = yes
 
         trigger = {
-                owner = {
-                        has_building = "building_capital_2"
+                from = {
+                        has_building = "building_capital_1"
                 }
         }
         immediate = {
